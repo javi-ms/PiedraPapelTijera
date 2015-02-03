@@ -6,6 +6,7 @@
 package piedrapapeltijera;
 
 import java.util.Random;
+import javax.swing.JLabel;
 
 /**
  *
@@ -40,55 +41,141 @@ public class Elementos {
     Random jugadaAleatoria = new Random();
 
     int jugadaAl;
+    /*crear metodo, en el metodo indicarle el jlabel y añadir imagenes*/
+//    public String anadeImagen(JLabel jLabel){
+//    
+//    jLabel.();
+//    }
 
     public String comparaElementos(int jugada1) {
         jugadaJugador = jugada1;
-
-        if (jugadaJugador == FUEGO &&jugadaAl==VIENTO) {
-//
-//        } else {
-//            if (true) {
-//
-//            } else {
-//                if (true) {
-//
-//                } else {
-//                    if (true) {
-//
-//                    }
-//                }
-//            }
+        boolean vencedor = false;
+        //
+        if (jugadaJugador == FUEGO && jugadaAl == VIENTO || jugadaJugador == VIENTO && jugadaAl == FUEGO) {
+            System.out.println("Ganador fuego");
+            return String.valueOf(vencedor = true);
+        }
+        if (jugadaJugador == FUEGO && jugadaAl == TIERRA || jugadaJugador == TIERRA && jugadaAl == FUEGO) {
+            System.out.println("Ganador fuego");
+            return String.valueOf(vencedor = true);
+        }
+        if (jugadaJugador == FUEGO && jugadaAl == FUEGO || jugadaJugador == FUEGO && jugadaAl == FUEGO) {
+            System.out.println(" EMPATE");
+            return String.valueOf("empate");
+        }
+        //        if (jugadaJugador == FUEGO && jugadaAl == RAYO) {
+//            System.out.println("Ganador fuego");
+//            return String.valueOf(vencedor = true);
 //        }
-//        //return
+        //
+        if (jugadaJugador == VIENTO && jugadaAl == RAYO || jugadaJugador == RAYO && jugadaAl == VIENTO) {
+            System.out.println("Ganador viento");
+            return String.valueOf(vencedor = true);
         }
+        if (jugadaJugador == VIENTO && jugadaAl == TIERRA || jugadaJugador == TIERRA && jugadaAl == VIENTO) {
+            System.out.println("Ganador viento");
+            return String.valueOf(vencedor = true);
+        }
+        if (jugadaJugador == VIENTO && jugadaAl == AGUA || jugadaJugador == AGUA && jugadaAl == VIENTO) {
+            System.out.println("Ganador viento");
+            return String.valueOf(vencedor = true);
+        }
+
+        if (jugadaJugador == VIENTO && jugadaAl == VIENTO || jugadaJugador == VIENTO && jugadaAl == VIENTO) {
+            System.out.println("EMPATE");
+            return String.valueOf("EMPATE");
+        }
+        //        if (jugadaJugador == VIENTO && jugadaAl == FUEGO) {
+//            System.out.println("EMPATE");
+//            return String.valueOf("EMPATE");
+//        }
+        //
+        if (jugadaJugador == RAYO && jugadaAl == AGUA || jugadaJugador == AGUA && jugadaAl == RAYO) {
+            System.out.println("Ganador rayo");
+            return String.valueOf(vencedor = true);
+        }
+        if (jugadaJugador == RAYO && jugadaAl == FUEGO || jugadaJugador == FUEGO && jugadaAl == RAYO) {
+            System.out.println("Ganador rayo");
+            return String.valueOf(vencedor = true);
+        }
+        if (jugadaJugador == RAYO && jugadaAl == RAYO || jugadaJugador == RAYO && jugadaAl == RAYO) {
+            System.out.println("EMPATE");
+            return String.valueOf("EMPATE");
+        }
+        //        if (jugadaJugador == RAYO && jugadaAl == TIERRA) {
+//            System.out.println("Ganador rayo");
+//            return String.valueOf(vencedor = true);
+//        }
+//        
+        if (jugadaJugador == TIERRA && jugadaAl == FUEGO || jugadaJugador == FUEGO && jugadaAl == TIERRA) {
+            System.out.println("Ganador tierra");
+            return String.valueOf(vencedor = true);
+        }
+        if (jugadaJugador == TIERRA && jugadaAl == VIENTO || jugadaJugador == VIENTO && jugadaAl == TIERRA) {
+            System.out.println("Ganador tierra");
+            return String.valueOf(vencedor = true);
+        }
+        if (jugadaJugador == TIERRA && jugadaAl == TIERRA || jugadaJugador == TIERRA && jugadaAl == TIERRA) {
+            System.out.println("EMPATE");
+            return String.valueOf("EMPATE");
+        }
+        //        if (jugadaJugador == TIERRA && jugadaAl == AGUA) {
+//            System.out.println("Ganador tierra");
+//            return String.valueOf(vencedor=true);
+//        }
+        //
+        if (jugadaJugador == AGUA && jugadaAl == FUEGO || jugadaJugador == FUEGO && jugadaAl == AGUA) {
+            System.out.println("Ganador agua");
+            return String.valueOf(vencedor = true);
+        }
+        if (jugadaJugador == AGUA && jugadaAl == VIENTO || jugadaJugador == VIENTO && jugadaAl == AGUA) {
+            System.out.println("Ganador agua");
+            return String.valueOf(vencedor = true);
+        }
+
+        if (jugadaJugador == AGUA && jugadaAl == AGUA || jugadaJugador == AGUA && jugadaAl == AGUA) {
+            System.out.println("EMPATE");
+        }
+        //        if (jugadaJugador == AGUA && jugadaAl == RAYO) {
+//            System.out.println("Ganador agua");
+//            return String.valueOf(vencedor = true);
+//        }
+
+        return String.valueOf(vencedor);
     }
-        void numElemento() {
+
+    void numElemento() {
         switch (jugadaAl) {
-                case 1:
-                    System.out.println("fuego");
+            case 1:
+                System.out.println("fuego");
 
-                    break;
-                case 2:
-                    System.out.println("Viento");
+                break;
+            case 2:
+                System.out.println("Viento");
 
-                    break;
-                case 3:
-                    System.out.println("Tierra");
-
-                    break;
-            }
+                break;
+            case 3:
+                System.out.println("Rayo");
+                break;
+            case 4:
+                System.out.println("Tierra");
+                break;
+            case 5:
+                System.out.println("Agua");
+                break;
         }
-        /**
-         * comparar dato1 con dato2
-         */
-
-        void jugadaMaquina() {
-        jugadaAl = jugadaAleatoria.nextInt(3) + 1;
-            System.out.println(jugadaAl);
-        }
-        /**
-         * comprobar el numero que salga se corresponde con una imagen
-         *
-         */
-
     }
+
+    /**
+     * comparar dato1 con dato2
+     */
+    void jugadaMaquina() {
+        jugadaAl = jugadaAleatoria.nextInt(3) + 1;
+        System.out.println(jugadaAl);
+    }
+    /**
+     * comprobar el numero que salga se corresponde con una imagen
+     *
+     */
+
+}
