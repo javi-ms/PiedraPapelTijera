@@ -173,9 +173,5 @@ public class Elementos {
         jugadaAl = jugadaAleatoria.nextInt(3) + 1;
         System.out.println(jugadaAl);
     }
-    /**
-     * comprobar el numero que salga se corresponde con una imagen
-     *
-     */
 
 }
